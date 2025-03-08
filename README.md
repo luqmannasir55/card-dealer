@@ -46,3 +46,13 @@ php artisan serve --host=0.0.0.0 --port=8000
 
 Access the app at:
 http://192.168.56.10:8000/index.html (for Vagrant)
+
+## If you need to stop the VM:
+```sh
+vagrant halt
+```
+
+### To completely remove it:
+```sh
+vagrant destroy
+```
