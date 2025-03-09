@@ -16,14 +16,6 @@ A Laravel-based web application that simulates dealing a deck of cards among a g
 
 ## Installation & Setup
 
-### Prerequisites
-Ensure you have the following installed:
-- PHP
-- Composer
-- MySQL
-- Vagrant & VirtualBox
-- Git
-
 ### Clone the Repository
 ```sh
 git clone https://github.com/luqmannasir55/card-dealer.git
