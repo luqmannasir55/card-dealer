@@ -32,7 +32,7 @@ class CardController extends Controller
             }
 
             // Prevent performance issue
-            if ($n > 1001000000) {
+            if ($n > 1000000) {
                 throw new InvalidArgumentException("Maximum inputreached"); // Error: Maximum input
             }
         
