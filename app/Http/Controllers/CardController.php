@@ -30,6 +30,11 @@ class CardController extends Controller
             if ($n === 0) {
                 throw new InvalidArgumentException("Input is zero"); // Error: Zero input
             }
+
+            // Prevent performance issue
+            if ($n > 1001000000) {
+                throw new InvalidArgumentException("Maximum inputreached"); // Error: Maximum input
+            }
         
             // Fetch suits and values from database
             try {
@@ -88,7 +93,7 @@ class CardController extends Controller
         } catch (InvalidArgumentException $e) {
             return response("Irregularity occurred", 400);
         } catch (RuntimeException $e) {
-            return response("RuntimeException: " . $e->getMessage(), 500);
+            return response("Irregularity occurred", 500);
         } catch (Exception $e) {
             return response("Irregularity occurred", 500);
         } catch (Throwable $e) {
